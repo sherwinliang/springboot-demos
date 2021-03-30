@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Druid Demo</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>编号</th>
+        <th>名称</th>
+        <th>说明</th>
+        <th>成本</th>
+        <th>价格</th>
+    </tr>
+
+    <tr th:each="item : ${products}">
+        <td th:text=${item.productCode}></td>
+        <td th:text=${item.productName}></td>
+        <td th:text=${item.productDescription}></td>
+        <td th:text=${item.cost}></td>
+        <td th:text=${item.price}></td>
+    </tr>
+    </c:forEach>
+
+</table>
+</body>
+</html>
