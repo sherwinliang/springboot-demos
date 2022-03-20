@@ -4,11 +4,10 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
-/**
- * Created by Haoxy on 2019-06-25.
- * E-mail:hxyHelloWorld@163.com
- * github:https://github.com/haoxiaoyong1014
- */
+/* @description: springboot application
+ * @author: Sherwin Liang
+ * @timestamp: 2022/3/20 10:50
+*/
 @SpringBootApplication
 @MapperScan("com.sherwin.druid.mapper")
 public class DruidApplication{

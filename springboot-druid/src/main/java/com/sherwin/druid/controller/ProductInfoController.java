@@ -6,11 +6,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-/**
- * Created by Haoxy on 2019-06-25.
- * E-mail:hxyHelloWorld@163.com
- * github:https://github.com/haoxiaoyong1014
- */
+/* @description: 获取产品列表
+ * @author: Sherwin Liang
+ * @timestamp: 2022/3/20 10:48
+*/
 @Controller
 public class ProductInfoController {
 
@@ -20,5 +19,10 @@ public class ProductInfoController {
     @RequestMapping("/")
     public ModelAndView lists() {
         return new ModelAndView("/list","products", productInfoService.getProducts());
+    }
+
+    @RequestMapping("/map")
+    public ModelAndView toMap() {
+        return new ModelAndView("/list2","products", productInfoService.getProductsMap());
     }
 }

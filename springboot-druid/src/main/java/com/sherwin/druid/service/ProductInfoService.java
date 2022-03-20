@@ -6,12 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
-/**
- * Created by Haoxy on 2019-06-25.
- * E-mail:hxyHelloWorld@163.com
- * github:https://github.com/haoxiaoyong1014
- */
+/* @description: 产品业务层
+ * @author: Sherwin Liang
+ * @timestamp: 2022/3/20 10:49
+*/
 @Service
 public class ProductInfoService {
 
@@ -19,6 +19,12 @@ public class ProductInfoService {
     private ProductInfoMapper productInfoMapper;
 
     public List<ProductInfoModel> getProducts() {
-        return productInfoMapper.getProducts();
+        List<ProductInfoModel> products = productInfoMapper.getProducts();
+        return products;
+    }
+
+    public List<Map<String, Object>> getProductsMap() {
+        List<Map<String, Object>> products = productInfoMapper.getProductsMap(9);
+        return products;
     }
 }

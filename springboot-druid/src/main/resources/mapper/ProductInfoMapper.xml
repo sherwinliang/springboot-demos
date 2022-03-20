@@ -7,4 +7,14 @@
         SELECT * FROM product_info
     </select>
 
+    <select id="getProductsMap" resultType="java.util.Map">
+        SELECT * FROM product_info a
+            left join normal_type b on b.type=a.product_type
+            left join special_type c on c.type=a.product_type
+            where a.product_type is not null
+            <if test="mapFlag!=null">
+                and 9=#{mapFlag, jdbcType=DECIMAL}
+            </if>
+    </select>
+
 </mapper>

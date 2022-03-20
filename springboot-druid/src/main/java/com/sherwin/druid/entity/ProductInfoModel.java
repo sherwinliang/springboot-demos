@@ -2,11 +2,10 @@ package com.sherwin.druid.entity;
 
 import java.util.Date;
 
-/**
- * Created by Haoxy on 2019-06-25.
- * E-mail:hxyHelloWorld@163.com
- * github:https://github.com/haoxiaoyong1014
- */
+/* @description: 产品模型
+ * @author: Sherwin Liang
+ * @timestamp: 2022/3/20 10:48
+*/
 public class ProductInfoModel {
 
     private Long productId;
